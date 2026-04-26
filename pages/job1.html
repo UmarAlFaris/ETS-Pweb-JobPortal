@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Job Details - Apply</title>
+    <link rel="stylesheet" href="../css/detail.css">
+</head>
+<body class="detail-page">
+
+    <a href="../index.html" class="back-link">&larr; Back to Job List</a>
+
+    <div class="job-header">
+        Python NLP Engineer
+    </div>
+
+    <div class="job-meta">
+        <strong>Category:</strong> Programming<br>
+        <strong>Location:</strong> Surabaya<br>
+        <strong>Company:</strong> Tech Solutions Inc.
+    </div>
+
+    <div class="job-description">
+        <h3>Job Description</h3>
+        <p>Kami sedang mencari Engineer NLP Python yang berdedikasi untuk bergabung dengan tim kami di Surabaya. Anda akan bertanggung jawab untuk membangun dan melatih model pemrosesan bahasa alami guna membersihkan, menyusun, dan menganalisis kumpulan data teks yang besar.</p>
+        
+        <h3>Requirements</h3>
+        <ul>
+            <li>Pemahaman yang kuat tentang Python.</li>
+            <li>Pengalaman dengan pustaka pemrosesan teks.</li>
+            <li>Kemampuan untuk bekerja secara mandiri.</li>    
+        </ul>
+    </div>
+
+    <div class="apply-section">
+        <h3>Apply Form</h3>
+        
+        <form id="apply-form" data-redirect="../index.html">
+            
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Handphone Number:</label>
+                <input type="tel" id="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="resume">Upload CV / Resume:</label>
+                <input type="file" id="resume" required>
+            </div>
+
+            <button type="submit" class="btn-apply">Submit Application</button>
+            
+        </form>
+    </div>
+
+    <script src="../js/validation.js"></script>
+
+</body>
+</html>

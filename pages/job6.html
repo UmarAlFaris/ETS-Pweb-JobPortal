@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Job Details - Apply</title>
+    <link rel="stylesheet" href="../css/detail.css">
+</head>
+<body class="detail-page">
+
+    <a href="../index.html" class="back-link">&larr; Back to Job List</a>
+
+    <div class="job-header">
+        Game Progammer - C++
+    </div>
+
+    <div class="job-meta">
+        <strong>Category:</strong> Programming<br>
+        <strong>Location:</strong> Jakarta<br>
+        <strong>Company:</strong>  PT. Game Dev Indonesia
+    </div>
+
+    <div class="job-description">
+        <h3>Job Description</h3>
+        <p>We are looking for a skilled Game Programmer with expertise in C++ to join our dynamic team. The ideal candidate will be responsible for developing and optimizing game code, collaborating with designers and artists, and ensuring the overall performance of our games.</p>
+
+        <h3>Requirements</h3>
+        <ul>
+            <li>Bachelor's degree in Computer Science or related field.</li>
+            <li>Proven experience in game programming using C++.</li>
+            <li>Strong understanding of game development principles and practices.</li>
+            <li>Experience with game engines such as Unreal Engine or Unity is a plus.</li>
+            <li>Ability to work collaboratively in a team environment.</li>
+        </ul>
+    </div>
+
+    <div class="apply-section">
+        <h3>Apply Form</h3>
+        
+        <form id="apply-form" data-redirect="../index.html">
+            
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Handphone Number:</label>
+                <input type="tel" id="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="resume">Upload CV / Resume:</label>
+                <input type="file" id="resume" required>
+            </div>
+
+            <button type="submit" class="btn-apply">Submit Application</button>
+            
+        </form>
+    </div>
+
+    <script src="../js/validation.js"></script>
+
+</body>
+</html>

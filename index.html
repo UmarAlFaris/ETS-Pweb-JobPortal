@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Job Portal</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/filter.js" defer></script>
+</head>
+<body>
+
+    <h1>JOB PORTAL</h1>
+
+    <div class="filter-container">
+        <div class="filter-group">
+            <h3>category</h3>
+            <label><input type="checkbox" name="category" value="programming"> programming</label>
+            <label><input type="checkbox" name="category" value="design"> design</label>
+            <label><input type="checkbox" name="category" value="manager"> manager</label>
+        </div>
+        <div class="filter-group">
+            <h3>location</h3>
+            <label><input type="checkbox" name="location" value="surabaya"> Surabaya</label>
+            <label><input type="checkbox" name="location" value="jakarta"> Jakarta</label>
+            <label><input type="checkbox" name="location" value="bekasi"> Bekasi</label>
+        </div>
+    </div>
+
+    <div class="job-grid">
+        
+        <div class="job-card" data-category="programming" data-location="surabaya">
+            <h2>Python NLP Engineer</h2>
+            <div class="job-details">
+                <strong>Programming</strong><br>
+                Surabaya<br><br>
+                We are looking for someone to help build natural language processing models for Indonesian folklore datasets.
+            </div>
+            <a href="pages/job1.html" class="btn-apply">View Details</a>
+        </div>
+
+        <div class="job-card" data-category="design" data-location="jakarta">
+            <h2>UI/UX Designer</h2>
+            <div class="job-details">
+                <strong>Design</strong><br>
+                Jakarta<br><br>
+                Design simple, easy-to-use web layouts for a tech startup. Must have wireframing experience.
+            </div>
+            <a href="pages/job2.html" class="btn-apply">View Details</a>
+        </div>
+
+        <div class="job-card" data-category="manager" data-location="bekasi">
+            <h2>IT Project Manager</h2>
+            <div class="job-details">
+                <strong>Manager</strong><br>
+                Bekasi<br><br>
+                Manage a team of software developers. Keep track of deadlines and organize GitHub repositories.
+            </div>
+            <a href="pages/job3.html" class="btn-apply">View Details</a>
+        </div>
+
+        <div class="job-card" data-category="manager" data-location="surabaya">
+            <h2>Community Manager - ZZZ</h2>
+            <div class="job-details">
+                <strong>Manager</strong><br>
+                Surabaya<br><br>
+                We are looking for a community manager to help manage the Zenless Zone Zero community in Indonesia. Must have experience with social media and community engagement.
+            </div>
+            <a href="pages/job4.html" class="btn-apply">View Details</a>
+        </div>
+
+        <div class="job-card" data-category="programming" data-location="jakarta">
+            <h2>Deep Learning Specialist</h2>
+            <div class="job-details">
+                <strong>Programming</strong><br>
+                Jakarta<br><br>
+                We are looking for a deep learning specialist to help build and optimize deep learning models for various applications. Must have experience with Python.
+            </div>
+            <a href="pages/job5.html" class="btn-apply">View Details</a>
+        </div> 
+
+        <div class="job-card" data-category="programming" data-location="jakarta">
+            <h2>Game Programmer - C++</h2>
+            <div class="job-details">
+                <strong>Programming</strong><br>
+                Jakarta<br><br>
+                We are looking for a game programmer to help develop and optimize game mechanics and features using C++. Must have experience with game development.
+            </div>
+            <a href="pages/job6.html" class="btn-apply">View Details</a>
+        </div> 
+        
+    </div> </body>
+</html>

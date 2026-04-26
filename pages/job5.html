@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Job Details - Apply</title>
+    <link rel="stylesheet" href="../css/detail.css">
+</head>
+<body class="detail-page">
+
+    <a href="../index.html" class="back-link">&larr; Back to Job List</a>
+
+    <div class="job-header">
+        Deep Learning Specialist -Python
+    </div>
+
+    <div class="job-meta">
+        <strong>Category:</strong> Programming<br>
+        <strong>Location:</strong> Medan <br>
+        <strong>Company:</strong> CissiaSolutions
+    </div>
+
+    <div class="job-description">
+        <h3>Job Description</h3>
+        <p>We are looking for a Deep Learning Specialist with expertise in Python to join our team. The ideal candidate will have experience in developing and implementing deep learning models for various applications.</p>
+
+        <h3>Requirements</h3>
+        <ul>
+            <li>Bachelor's degree in Computer Science, Data Science, or related field.</li>
+            <li>Strong understanding of Python.</li>
+            <li>Experience with text processing libraries.</li>
+            <li>Ability to work independently.</li>
+            <li>Excellent problem-solving skills.</li>
+            <li>Good communication skills.</li>
+            <li>Experience with deep learning frameworks is a plus.</li>
+        </ul>
+    </div>
+
+    <div class="apply-section">
+        <h3>Apply Form</h3>
+        
+        <form id="apply-form" data-redirect="../index.html">
+            
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Handphone Number:</label>
+                <input type="tel" id="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="resume">Upload CV / Resume:</label>
+                <input type="file" id="resume" required>
+            </div>
+
+            <button type="submit" class="btn-apply">Submit Application</button>
+            
+        </form>
+    </div>
+
+    <script src="../js/validation.js"></script>
+
+</body>
+</html>
