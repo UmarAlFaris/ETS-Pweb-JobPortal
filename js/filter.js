@@ -1,62 +1,47 @@
-'use strict';
+document.querySelector('.filter-container').addEventListener('change', filterJobs);
 
-function getCheckedValues(nodeList) {
-    const values = [];
-    for (const input of nodeList) {
-        if (input && input.checked) {
-            values.push(String(input.value || '').trim().toLowerCase());
-        }
-    }
-    return values;
-}
+filterJobs();
 
-function applyFilters(cards, categoryInputs, locationInputs) {
-    const selectedCategories = getCheckedValues(categoryInputs);
-    const selectedLocations = getCheckedValues(locationInputs);
+function filterJobs() {
+    var i, j;
 
-    for (const card of cards) {
-        const cardCategory = String(card?.dataset?.category || '').trim().toLowerCase();
-        const cardLocation = String(card?.dataset?.location || '').trim().toLowerCase();
-
-        const matchesCategory =
-            selectedCategories.length === 0 || selectedCategories.includes(cardCategory);
-        const matchesLocation =
-            selectedLocations.length === 0 || selectedLocations.includes(cardLocation);
-
-        const shouldShow = matchesCategory && matchesLocation;
-        card.classList.toggle('hidden', !shouldShow);
-    }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    const filterContainer = document.querySelector('.filter-container');
-    const cards = Array.from(document.querySelectorAll('.job-card'));
-
-    const categoryInputs = Array.from(
-        document.querySelectorAll('input[type="checkbox"][name="category"]')
-    );
-    const locationInputs = Array.from(
-        document.querySelectorAll('input[type="checkbox"][name="location"]')
-    );
-
-    if (cards.length === 0 || (!filterContainer && categoryInputs.length === 0 && locationInputs.length === 0)) {
-        return;
-    }
-
-    const run = () => applyFilters(cards, categoryInputs, locationInputs);
-
-    if (filterContainer) {
-        filterContainer.addEventListener('change', (event) => {
-            const target = event.target;
-            if (target && target.matches('input[type="checkbox"]')) {
-                run();
-            }
-        });
-    } else {
-        for (const input of [...categoryInputs, ...locationInputs]) {
-            input.addEventListener('change', run);
+    var categoryCheckboxes = document.getElementsByName('category');
+    var checkedCategories = [];
+    for (i = 0; i < categoryCheckboxes.length; i++) {
+        if (categoryCheckboxes[i].checked == true) {
+            checkedCategories.push(categoryCheckboxes[i].value);
         }
     }
 
-    run();
-});
+    var locationCheckboxes = document.getElementsByName('location');
+    var checkedLocations = [];
+    for (i = 0; i < locationCheckboxes.length; i++) {
+        if (locationCheckboxes[i].checked == true) {
+            checkedLocations.push(locationCheckboxes[i].value);
+        }
+    }
+
+    var cards = document.getElementsByClassName('job-card');
+    
+    for (j = 0; j < cards.length; j++) {
+        var cardCategory = cards[j].getAttribute('data-category');
+        var cardLocation = cards[j].getAttribute('data-location');
+        
+        var categoryMatch = false;
+        var locationMatch = false;
+
+        if (checkedCategories.length == 0 || checkedCategories.indexOf(cardCategory) > -1) {
+            categoryMatch = true;
+        }
+
+        if (checkedLocations.length == 0 || checkedLocations.indexOf(cardLocation) > -1) {
+            locationMatch = true;
+        }
+
+        if (categoryMatch == true && locationMatch == true) {
+            cards[j].style.display = "block";
+        } else {
+            cards[j].style.display = "none";
+        }
+    }
+}
